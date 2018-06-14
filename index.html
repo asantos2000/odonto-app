@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html style="height:100%;">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>odonto-x-ray</title>
+    <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
+    <link rel="icon" href="assets/img/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/fonts/ionicons.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bitter:400,700">
+    <link rel="stylesheet" href="assets/css/Footer-Basic.css">
+    <link rel="stylesheet" href="assets/css/Footer-Dark.css">
+    <link rel="stylesheet" href="assets/css/Header-Dark.css">
+    <link rel="stylesheet" href="assets/css/Highlight-Blue.css">
+    <link rel="stylesheet" href="assets/css/Highlight-Clean.css">
+    <link rel="stylesheet" href="assets/css/Login-Form-Clean.css">
+    <link rel="stylesheet" href="assets/css/Navigation-with-Button.css">
+    <link rel="stylesheet" href="assets/css/Newsletter-Subscription-Form.css">
+    <link rel="stylesheet" href="assets/css/Registration-Form-with-Photo.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body style="height:100%;">
+    <div>
+        <nav class="navbar navbar-light navbar-expand-md navigation-clean-button">
+            <div class="container">
+                <a class="navbar-brand text-monospace text-primary" href="#">Akili</a>
+                <button class="navbar-toggler" data-toggle="collapse" data-target="#navcol-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navcol-1">
+                    <ul class="nav navbar-nav mr-auto">
+                        <li class="dropdown">
+                            <a class="dropdown-toggle nav-link dropdown-toggle" data-toggle="dropdown" aria-expanded="false" href="#">Menu&nbsp;</a>
+                            <div class="dropdown-menu" role="menu">
+                                <a class="dropdown-item" role="presentation" href="index.html">Home</a>
+                                <a class="dropdown-item" role="presentation" href="terms.html">Terms</a>
+                                <a class="dropdown-item" role="presentation" href="about.html">About</a>
+                            </div>
+                        </li>
+                    </ul>
+                    <span class="navbar-text actions">
+                        <a href="login.html" class="login">Log In</a>
+                        <a class="btn btn-light action-button" role="button" href="signup.html">Sign Up</a>
+                    </span>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="card-title">Odonto x-ray classifier (demo)</h4>
+                            <h6 class="text-muted card-subtitle mb-2">by Origo</h6>
+                            <p class="lead card-text">This tool uses a Artificial Inteligence to recognize what kind of x-ray you uploaded. The recognizable
+                                categories, at this moment, are interproximal, occlusal, panoramic and periapical.
+                                <br>
+                            </p>
+                            <input type="file" accept="image/*" id="imageToClassify" style="margin:20px;margin-right:0px;margin-left:0px;" onchange="render()">
+                            <button class="btn btn-primary" type="button" id="classify" onclick="classifyImage()">Classify image</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <table>
+                                <tr>
+                                    <td>
+                                        <h4 class="card-title" id="label">image label</h4>
+                                        <h6 class="text-muted card-subtitle" id="probability">probability %</h6>
+                                    </td>
+
+                                    <td>
+                                        <img id="load-img" src="assets/img/loading-bar.gif" width="64" height="64" style="visibility:hidden" />
+                                    </td>
+                                </tr>
+                            </table>
+                            <img class="img-fluid" src="assets/img/placeholder.png" id="selectedImg">
+                            <p class="card-text" id="result">Choose image file on your computer.</p>
+                            <p class="card-text" id="feedback-text" style="visibility:hidden">This image was classified correctly?</p>
+                            <a class="card-link" href="#" id="feedback-yes" style="visibility:hidden">Yes</a>
+                            <a class="card-link" href="#" id="feedback-no" style="visibility:hidden">No</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-basic">
+        <footer>
+            <div class="social">
+                <a href="https://twitter.com/asantos_2000">
+                    <i class="icon ion-social-twitter-outline"></i>
+                </a>
+                <a href="https://github.com/asantos2000/tensorflow-odonto">
+                    <i class="icon ion-social-github-outline"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/adsantos/">
+                    <i class="icon ion-social-linkedin-outline"></i>
+                </a>
+            </div>
+            <ul class="list-inline">
+                <li class="list-inline-item">
+                    <a href="#">Home</a>
+                </li>
+                <li class="list-inline-item">
+                    <a href="about.html">About</a>
+                </li>
+                <li class="list-inline-item">
+                    <a href="terms.html">Terms</a>
+                </li>
+            </ul>
+            <p class="copyright">Origo Consult © 2018</p>
+        </footer>
+    </div>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="https://sdk.amazonaws.com/js/aws-sdk-2.7.16.min.js"></script>
+    <script src="assets/js/app.js"></script>
+</body>
+
+</html>
