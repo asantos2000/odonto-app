@@ -59,7 +59,7 @@ function classifyImage() {
 function classify(name) {
     let xhr = new XMLHttpRequest();
     xhr.open('GET', 'https://bvcoblioxe.execute-api.us-east-1.amazonaws.com/dev/classify?imagename=' + name, true);
-    xhr.setRequestHeader("x-api-key", "xxxx");
+    xhr.setRequestHeader("x-api-key", "xxxxx");
     xhr.send();
 
     xhr.onreadystatechange = () => {
