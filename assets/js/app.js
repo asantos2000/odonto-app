@@ -2,7 +2,7 @@
 
 const albumBucketName = 'origo-uploaded';
 const bucketRegion = 'us-east-1';
-const IdentityPoolId = 'us-east-1:xxxxxxx';
+const IdentityPoolId = 'us-east-1:xxxx';
 
 AWS.config.update({
     region: bucketRegion,
@@ -59,7 +59,7 @@ function classifyImage() {
 function classify(name) {
     let xhr = new XMLHttpRequest();
     xhr.open('GET', 'https://bvcoblioxe.execute-api.us-east-1.amazonaws.com/dev/classify?imagename=' + name, true);
-    xhr.setRequestHeader("x-api-key", "xxxxx");
+    xhr.setRequestHeader("x-api-key", "xxxx");
     xhr.send();
 
     xhr.onreadystatechange = () => {
